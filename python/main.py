@@ -1,6 +1,6 @@
 from model.serie import Serie
 from model.filme import Filme
-from model.documentario import Documentario
+from model.mysql.documentario import Documentario
 from model.playlist import Playlist
 
 
