@@ -41,5 +41,6 @@ print(f"friends in playlist_1? {friends in playlist_1}")
 '''
 print(f"friends in playlist_1? {friends in playlist_1}")
 print(f"último item da playlist {playlist_1[-1]}")
+print(f"Tamanho da playlist {len(playlist_1)}")
 for programa in playlist_1:
     print(programa)
