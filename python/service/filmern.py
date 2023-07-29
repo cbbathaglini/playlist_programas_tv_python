@@ -47,8 +47,6 @@ class FilmeRN:
 
             filmeBD = FilmeBD()
             filmeBD.cadastrar(connection=connection,filme=filme)
-            print(f"Filme cadastrado: {filme}")
-
             connection.close()
         except Error as err:
             print(f"Error: '{err}'")

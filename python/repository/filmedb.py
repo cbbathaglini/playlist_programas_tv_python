@@ -7,21 +7,12 @@ class FilmeBD:
         try:
 
             cursor = connection.cursor()
-            query = 'INSERT INTO filmes (nome, duracao, ano) VALUES ('+filme.nome+','+str(filme.duracao)+','+str(filme.ano)+')'
-            
-
-            '''
-            arrayBind = []
-            arrayBind = [['s',filme.nome]]
-            arrayBind = [['i',filme.duracao]]
-            arrayBind = [['i',filme.ano]]
-            print(f"arraybind: {arrayBind}")
-            '''
-
-            cursor.execute(query)
+            query = 'INSERT INTO filmes (nome, duracao, ano) VALUES (%s,%s,%s)'
+            arrayBind = [filme.nome,filme.duracao,filme.ano]
+            cursor.execute(query,arrayBind)
             connection.commit()
             
-            print(f"Filme {filme} - cadastrado com sucesso!")
+            print(f"{filme} - cadastrado com sucesso!")
             return filme
         except Error as err:
             print(f"Error: '{err}'")

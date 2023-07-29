@@ -7,4 +7,4 @@ class Configuracao:
         return self.instance
     '''
     def db_config(self):
-        return ["localhost", "root", "","3306","playlists_withoutdocker"];
+        return ["localhost", "root", "","3306","playlists_withoutdocker"]
